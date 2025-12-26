@@ -24,10 +24,17 @@ This repository contains a customizable virtual touch keyboard designed for web 
 - Include the `keyboard.css` and `keyboard.js` files in your project.
 - Add the `use-keyboard-input` class to any input field to enable the virtual keyboard.
 
-### Example
+### Examples
+Simple input field
 ```html
-<input type="text" class="use-keyboard-input" />
+<input type="text" id="input1" class="use-keyboard-input"/>
+```
+Text area with corresponding clear button
+```html
+<textarea id="input2" class="use-keyboard-input"/>
+<button id="clear-button2">Clear</button>
 ```
 
 ## License
+
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
