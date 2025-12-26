@@ -35,6 +35,10 @@ Text area with corresponding clear button
 <button id="clear-button2">Clear</button>
 ```
 
+## Attribution
+Thanks to [dcode](https://github.com/dcode-youtube) for providing the initial code base and explanation on [YouTube](https://www.youtube.com/watch?v=N3cq0BHDMOY)!
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
