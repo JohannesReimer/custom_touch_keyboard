@@ -200,7 +200,14 @@ const Keyboard = {
                     keyElement.innerHTML = this.createIconHTML("keyboard_return");
 
                     this._addHoldBehavior(keyElement, (valueBefore, valueAfter, caretPosition) => {
-                        return { value: valueBefore + "\n" + valueAfter, caretPosition: caretPosition + 1};
+                        const activeElement = document.activeElement;
+                        if (activeElement && activeElement.tagName === "INPUT" && activeElement.type === "text") {
+                            // Prevent Enter key action for text input fields
+                            return { value: valueBefore + valueAfter, caretPosition };
+                        }
+
+                        // Default behavior for other input types
+                        return { value: valueBefore + "\n" + valueAfter, caretPosition: caretPosition + 1 };
                     });
 
                     break;
@@ -595,3 +602,4 @@ document.querySelectorAll(".use-keyboard-input").forEach((input) => {
         }, { once: true });
     });
 });
+
