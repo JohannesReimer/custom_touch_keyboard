@@ -514,6 +514,7 @@ const Keyboard = {
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose = onclose;
         this.elements.main.classList.remove("keyboard--hidden");
+        this.elements.main.style.zIndex = "999999";
     },
 
     close() {
@@ -602,4 +603,5 @@ document.querySelectorAll(".use-keyboard-input").forEach((input) => {
         }, { once: true });
     });
 });
+
 
